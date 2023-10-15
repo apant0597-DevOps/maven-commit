@@ -25,7 +25,6 @@ pipeline {
                     scp -o StrictHostKeyChecking=no target/myapp.jar ec2-user@35.86.109.81:/opt/tomcat9/webapps
                     ssh ec2-user@35.86.109.81 /opt/tomcat9/bin/shutdown.sh
                     ssh ec2-user@35.86.109.81 /opt/tomcat9/bin/startup.sh
-		    java -jar /opt/tomcat9/webapps/myapp.jar
                 
                     '''
                 }
